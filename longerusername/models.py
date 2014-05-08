@@ -15,9 +15,9 @@ def patch_user_model(model):
     field = model._meta.get_field("username")
 
     field.max_length = MAX_USERNAME_LENGTH()
-    field.help_text = _("Required, %s characters or fewer. Only letters, "
-                        "numbers, and @, ., +, -, or _ "
-                        "characters." % MAX_USERNAME_LENGTH())
+#    field.help_text = _("Required, %s characters or fewer. Only letters, "
+#                        "numbers, and @, ., +, -, or _ "
+#                        "characters." % MAX_USERNAME_LENGTH())
 
     # patch model field validator because validator doesn't change if we change
     # max_length
